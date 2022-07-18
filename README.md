@@ -1,6 +1,25 @@
-# Getting Started with Create React App
+# React Google Maps Integration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal [React GoogleMaps](https://github.com/tomchentw/react-google-maps) TypeScript application.<br />
+SASS was used for styling.<br />
+Persisting data in local storage.<br />
+
+Project is deployed to [Github Pages](https://pages.github.com/), and demo can be seen [here](https://stefanikolic018.github.io/google-maps-react-test/).<span style="color:orangered">*</span><i>MAP IS NOT WORKING PROBABLY BECAUSE OF THE BILLING</i>
+
+## Idea and Usage
+
+On startup, the application will try to load the data from local storage. If there is no data(that's the case when the application starts the first time), it will show the map with center of it in Nis, Serbia.
+<img src="/public/screenshots/map.png" alt="On load" title="On load" style="text-align: center">
+When the user clicks on the map, the application will save the coordinates of the clicked point and also map informations like zoom and center of the map in local storage and add an orange marker on the map. On click marker will change color, and on right click marker would be removed.
+<img src="/public/screenshots/markerOne.png" alt="Marker" title="Marker" style="text-align: center">
+User can add multiple markers on the map, by entering latitude, longitude and color into "Batch Add" field by spliting information with new line for every marker. If color is not filled then default color of marker will be orange.
+<img src="/public/screenshots/batch.png" alt="Batch add" title="Batch add" style="text-align: center">
+
+There is error handling for the following cases:
+- If user enters empty string into batch add
+<img src="/public/screenshots/error.png" alt="Empty string" title="Empty string" style="text-align: center">
+
+
 
 ## Available Scripts
 
@@ -13,34 +32,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

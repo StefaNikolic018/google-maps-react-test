@@ -150,7 +150,7 @@ export default function Map({ batchMarkers }: TMapProps) {
       })
       setMarkers([...markers, ...newMarkers]);
       setCenter({ lat: batchMarkers[batchMarkers.length - 1].lat, lng: batchMarkers[batchMarkers.length - 1].lng })
-      setZoom(3);
+      setZoom(7);
     }
   }, [batchMarkers.length])
 
