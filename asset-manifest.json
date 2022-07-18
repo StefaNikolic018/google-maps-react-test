@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.db9c8721.css",
-    "main.js": "/static/js/main.bf704193.js",
-    "static/js/787.0cae83d1.chunk.js": "/static/js/787.0cae83d1.chunk.js",
-    "index.html": "/index.html",
-    "main.db9c8721.css.map": "/static/css/main.db9c8721.css.map",
-    "main.bf704193.js.map": "/static/js/main.bf704193.js.map",
-    "787.0cae83d1.chunk.js.map": "/static/js/787.0cae83d1.chunk.js.map"
+    "main.css": "/google-maps-react-test/static/css/main.db9c8721.css",
+    "main.js": "/google-maps-react-test/static/js/main.91af455f.js",
+    "static/js/787.0cae83d1.chunk.js": "/google-maps-react-test/static/js/787.0cae83d1.chunk.js",
+    "index.html": "/google-maps-react-test/index.html",
+    "main.db9c8721.css.map": "/google-maps-react-test/static/css/main.db9c8721.css.map",
+    "main.91af455f.js.map": "/google-maps-react-test/static/js/main.91af455f.js.map",
+    "787.0cae83d1.chunk.js.map": "/google-maps-react-test/static/js/787.0cae83d1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.db9c8721.css",
-    "static/js/main.bf704193.js"
+    "static/js/main.91af455f.js"
   ]
 }
