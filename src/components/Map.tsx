@@ -5,10 +5,6 @@ import {
   Marker
 } from '@react-google-maps/api'
 
-// type latLngT = google.maps.LatLngLiteral
-// type latLngBoundsT = google.maps.LatLngBoundsLiteral
-// type mapOptionsT = google.maps.MapOptions
-
 interface markersT {
   id: number,
   marker: typeof Marker
@@ -103,10 +99,9 @@ export default function Map({ batchMarkers }: TMapProps) {
     }, 0)
   }
 
-  // - Upload na github i deploy na github pages
-
   useEffect(() => {
     if (markerId.id) {
+      // Changing color of marker
       if (markerId.color) {
         const marker = markers.find((m: any) => m.id === markerId.id);
         let newColor = colors[Math.floor(Math.random() * 7)];
@@ -130,6 +125,7 @@ export default function Map({ batchMarkers }: TMapProps) {
   }, [markerId.id])
 
   useEffect(() => {
+    // Batch add markers
     if (batchMarkers.length) {
       let c = count;
       const newMarkers: any = [];
@@ -159,23 +155,27 @@ export default function Map({ batchMarkers }: TMapProps) {
   }, [batchMarkers.length])
 
   useEffect(() => {
+    // Updating local storage when changes on the map occur
     if (count > 0) {
       updateLocalStorage();
     }
   }, [markers.length, center, zoom, count]);
 
   useEffect(() => {
+    // Setting map options from localStorage
     if (JSON.parse(localStorage.getItem('map')!)) {
       const map = JSON.parse(localStorage.getItem('map')!);
       setCenter(map.center);
       setMarkers(map.markers);
       setCount(map.count);
+      // HACK: Bug with zoom onload so I had to do it like this
       setTimeout(() => {
         setZoom(JSON.parse(localStorage.getItem('map')!).zoom);
       }, 0)
     }
   }, [])
 
+  // Map options
   const options = {
     onLoad: (m: any) => initMap(m),
     mapContainerStyle: mapContainerStyle,
@@ -194,6 +194,7 @@ export default function Map({ batchMarkers }: TMapProps) {
         {...options}
       >
         {markers && markers.map((m: any) => {
+          // Markers were saved in localStorage as objects so I had to convert them to Marker components
           return <Marker
             key={m.id}
             position={m.marker.props.position}
