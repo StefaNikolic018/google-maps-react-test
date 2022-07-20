@@ -4,7 +4,7 @@ Personal [React GoogleMaps](https://github.com/tomchentw/react-google-maps) Type
 SASS was used for styling.<br />
 Persisting data in local storage.<br />
 
-Project is deployed to [Github Pages](https://pages.github.com/), and demo can be seen [here](https://stefanikolic018.github.io/google-maps-react-test/).<span style="color:orangered"><br />*</span><i><u><b>MAP IS NOT WORKING PROBABLY BECAUSE OF THE BILLING</b></u></i>
+Project is deployed to [Github Pages](https://pages.github.com/), and demo can be seen [here](https://stefanikolic018.github.io/google-maps-react-test/).<span style="color:orangered"><br />*</span><i><u><b>CURRENTLY MAP IS NOT WORKING ON LIVE PROBABLY BECAUSE OF THE BILLING, BUT WORKS ON LOCALHOST</b></u></i>
 
 ## Idea and Usage
 
